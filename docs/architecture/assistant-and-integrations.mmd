@@ -1,0 +1,7 @@
+flowchart TD
+  Query[User query] --> Rank[askCopilot in src/main.js]
+  Rank --> Records[In-memory demo document records]
+  Rank --> Answer[Locally composed answer and sample citations]
+  Bubble[src/services/bubbleClient.js] -. not imported by UI .-> BubbleAPI[Bubble Data API]
+  PowerDMS[src/services/powerDmsClient.js] -. not imported by UI .-> Bridge[Configured PowerDMS endpoint]
+  Warning[README: browser tokens are visible; use a server boundary for production] --- Bubble

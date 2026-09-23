@@ -1,0 +1,657 @@
+{
+  "version": "1.0.0",
+  "kind": "codebase",
+  "project": {
+    "name": "Apex DMS",
+    "languages": [
+      "css",
+      "html",
+      "javascript",
+      "json",
+      "markdown"
+    ],
+    "frameworks": [],
+    "description": "Apex DMS is a concept-stage browser document-workspace prototype with local sample policy Q&A and standalone Bubble and PowerDMS adapter classes. The README states it is not a certified records system or authoritative policy repository.",
+    "analyzedAt": "2026-09-23T19:36:44.606Z",
+    "gitCommitHash": "ffc96b1da2fc0c536bebfd0b7d44975777c173a1"
+  },
+  "nodes": [
+    {
+      "id": "document:README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "README.md",
+      "summary": "Describes Apex DMS product concept, UI surfaces, Bubble and PowerDMS integration model, development commands, and explicit prototype limitations.",
+      "tags": [
+        "product-scope",
+        "architecture",
+        "prototype"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:index.html",
+      "type": "file",
+      "name": "index.html",
+      "filePath": "index.html",
+      "summary": "Provides the browser document shell and loads src/main.js as a module into the #root mount point.",
+      "tags": [
+        "application",
+        "source-file",
+        "apex-dms"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:package.json",
+      "type": "config",
+      "name": "package.json",
+      "filePath": "package.json",
+      "summary": "Defines a dependency-free static application with Python development serving and Node build/check scripts.",
+      "tags": [
+        "application",
+        "source-file",
+        "apex-dms"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:.gitkeep",
+      "type": "file",
+      "name": ".gitkeep",
+      "filePath": ".gitkeep",
+      "summary": "Empty tracked placeholder file.",
+      "tags": [
+        "application",
+        "source-file",
+        "apex-dms"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scripts/build.mjs",
+      "type": "file",
+      "name": "build.mjs",
+      "filePath": "scripts/build.mjs",
+      "summary": "Builds the static distribution by copying index.html and src into dist/.",
+      "tags": [
+        "build-tooling",
+        "nodejs",
+        "static-app"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scripts/check.mjs",
+      "type": "file",
+      "name": "check.mjs",
+      "filePath": "scripts/check.mjs",
+      "summary": "Performs a static content check for expected Apex UI and integration labels across selected source files.",
+      "tags": [
+        "build-tooling",
+        "nodejs",
+        "static-app"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/main.js",
+      "type": "file",
+      "name": "main.js",
+      "filePath": "src/main.js",
+      "summary": "Implements the self-contained browser UI, mock policy and work data, local question-answer ranking with citations, and event handlers.",
+      "tags": [
+        "browser-ui",
+        "document-workflow",
+        "mock-data"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/services/bubbleClient.js",
+      "type": "file",
+      "name": "bubbleClient.js",
+      "filePath": "src/services/bubbleClient.js",
+      "summary": "Exports a typed Bubble Data API adapter that fetches, creates, and updates entries using a configured bearer token.",
+      "tags": [
+        "bubble",
+        "integration",
+        "adapter"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/services/powerDmsClient.js",
+      "type": "file",
+      "name": "powerDmsClient.js",
+      "filePath": "src/services/powerDmsClient.js",
+      "summary": "Exports a PowerDMS bridge adapter for pulling and pushing documents with organization-scoped request headers.",
+      "tags": [
+        "powerdms",
+        "integration",
+        "adapter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/styles.css",
+      "type": "file",
+      "name": "styles.css",
+      "filePath": "src/styles.css",
+      "summary": "Defines the full visual layout and responsive styling for the Apex DMS browser interface.",
+      "tags": [
+        "application",
+        "source-file",
+        "apex-dms"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/main.js:askCopilot",
+      "type": "function",
+      "name": "askCopilot",
+      "filePath": "src/main.js",
+      "lineRange": [
+        47,
+        60
+      ],
+      "summary": "Ranks local document text against the query and returns an answer with document citations; it is a local mock flow, not a model-backed service.",
+      "tags": [
+        "browser-ui",
+        "function",
+        "source-backed"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/main.js:render",
+      "type": "function",
+      "name": "render",
+      "filePath": "src/main.js",
+      "lineRange": [
+        66,
+        116
+      ],
+      "summary": "Re-renders the browser UI from local in-memory state, including document cards and the assistant response.",
+      "tags": [
+        "browser-ui",
+        "function",
+        "source-backed"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/main.js:detailPanel",
+      "type": "function",
+      "name": "detailPanel",
+      "filePath": "src/main.js",
+      "lineRange": [
+        123,
+        136
+      ],
+      "summary": "Attaches browser event handlers for local UI interactions.",
+      "tags": [
+        "browser-ui",
+        "function",
+        "source-backed"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/main.js:bindEvents",
+      "type": "function",
+      "name": "bindEvents",
+      "filePath": "src/main.js",
+      "lineRange": [
+        141,
+        154
+      ],
+      "summary": "Attaches browser event handlers for local UI interactions.",
+      "tags": [
+        "browser-ui",
+        "function",
+        "source-backed"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/services/bubbleClient.js:BubbleClient",
+      "type": "class",
+      "name": "BubbleClient",
+      "filePath": "src/services/bubbleClient.js",
+      "lineRange": [
+        4,
+        44
+      ],
+      "summary": "Wraps Bubble Data API entry operations; the browser-exposed bearer token risk is explicitly documented in README.",
+      "tags": [
+        "integration",
+        "adapter",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/services/bubbleClient.js:BubbleClient.constructor",
+      "type": "function",
+      "name": "BubbleClient.constructor",
+      "filePath": "src/services/bubbleClient.js",
+      "summary": "Implements the constructor method of BubbleClient.",
+      "tags": [
+        "integration",
+        "adapter-method",
+        "source-backed"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/services/bubbleClient.js:BubbleClient.fetchEntries",
+      "type": "function",
+      "name": "BubbleClient.fetchEntries",
+      "filePath": "src/services/bubbleClient.js",
+      "summary": "Implements the fetchEntries method of BubbleClient.",
+      "tags": [
+        "integration",
+        "adapter-method",
+        "source-backed"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/services/bubbleClient.js:BubbleClient.createEntry",
+      "type": "function",
+      "name": "BubbleClient.createEntry",
+      "filePath": "src/services/bubbleClient.js",
+      "summary": "Implements the createEntry method of BubbleClient.",
+      "tags": [
+        "integration",
+        "adapter-method",
+        "source-backed"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/services/bubbleClient.js:BubbleClient.updateEntry",
+      "type": "function",
+      "name": "BubbleClient.updateEntry",
+      "filePath": "src/services/bubbleClient.js",
+      "summary": "Implements the updateEntry method of BubbleClient.",
+      "tags": [
+        "integration",
+        "adapter-method",
+        "source-backed"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/services/bubbleClient.js:BubbleClient.headers",
+      "type": "function",
+      "name": "BubbleClient.headers",
+      "filePath": "src/services/bubbleClient.js",
+      "summary": "Implements the headers method of BubbleClient.",
+      "tags": [
+        "integration",
+        "adapter-method",
+        "source-backed"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:src/services/powerDmsClient.js:PowerDmsClient",
+      "type": "class",
+      "name": "PowerDmsClient",
+      "filePath": "src/services/powerDmsClient.js",
+      "lineRange": [
+        1,
+        42
+      ],
+      "summary": "Wraps configurable PowerDMS bridge document pull and write requests.",
+      "tags": [
+        "integration",
+        "adapter",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/services/powerDmsClient.js:PowerDmsClient.constructor",
+      "type": "function",
+      "name": "PowerDmsClient.constructor",
+      "filePath": "src/services/powerDmsClient.js",
+      "summary": "Implements the constructor method of PowerDmsClient.",
+      "tags": [
+        "integration",
+        "adapter-method",
+        "source-backed"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/services/powerDmsClient.js:PowerDmsClient.pullDocuments",
+      "type": "function",
+      "name": "PowerDmsClient.pullDocuments",
+      "filePath": "src/services/powerDmsClient.js",
+      "summary": "Implements the pullDocuments method of PowerDmsClient.",
+      "tags": [
+        "integration",
+        "adapter-method",
+        "source-backed"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/services/powerDmsClient.js:PowerDmsClient.pushDocument",
+      "type": "function",
+      "name": "PowerDmsClient.pushDocument",
+      "filePath": "src/services/powerDmsClient.js",
+      "summary": "Implements the pushDocument method of PowerDmsClient.",
+      "tags": [
+        "integration",
+        "adapter-method",
+        "source-backed"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/services/powerDmsClient.js:PowerDmsClient.updateDocument",
+      "type": "function",
+      "name": "PowerDmsClient.updateDocument",
+      "filePath": "src/services/powerDmsClient.js",
+      "summary": "Implements the updateDocument method of PowerDmsClient.",
+      "tags": [
+        "integration",
+        "adapter-method",
+        "source-backed"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/services/powerDmsClient.js:PowerDmsClient.request",
+      "type": "function",
+      "name": "PowerDmsClient.request",
+      "filePath": "src/services/powerDmsClient.js",
+      "summary": "Implements the request method of PowerDmsClient.",
+      "tags": [
+        "integration",
+        "adapter-method",
+        "source-backed"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:index.html",
+      "target": "file:src/main.js",
+      "type": "depends_on",
+      "direction": "forward",
+      "description": "HTML module script mounts this browser entry point.",
+      "weight": 0.95
+    },
+    {
+      "source": "document:README.md",
+      "target": "file:src/services/bubbleClient.js",
+      "type": "documents",
+      "direction": "forward",
+      "description": "README documents the Bubble Data API adapter and its browser-token caveat.",
+      "weight": 0.95
+    },
+    {
+      "source": "document:README.md",
+      "target": "file:src/services/powerDmsClient.js",
+      "type": "documents",
+      "direction": "forward",
+      "description": "README describes the configurable PowerDMS bridge integration model.",
+      "weight": 0.95
+    },
+    {
+      "source": "config:package.json",
+      "target": "file:scripts/build.mjs",
+      "type": "configures",
+      "direction": "forward",
+      "description": "The package build script runs this static copy operation.",
+      "weight": 0.95
+    },
+    {
+      "source": "config:package.json",
+      "target": "file:scripts/check.mjs",
+      "type": "configures",
+      "direction": "forward",
+      "description": "The package check script runs this source-content check.",
+      "weight": 0.95
+    },
+    {
+      "source": "file:src/main.js",
+      "target": "function:src/main.js:askCopilot",
+      "type": "contains",
+      "direction": "forward",
+      "description": "File defines this function.",
+      "weight": 1
+    },
+    {
+      "source": "file:src/main.js",
+      "target": "function:src/main.js:render",
+      "type": "contains",
+      "direction": "forward",
+      "description": "File defines this function.",
+      "weight": 1
+    },
+    {
+      "source": "file:src/main.js",
+      "target": "function:src/main.js:detailPanel",
+      "type": "contains",
+      "direction": "forward",
+      "description": "File defines this function.",
+      "weight": 1
+    },
+    {
+      "source": "file:src/main.js",
+      "target": "function:src/main.js:bindEvents",
+      "type": "contains",
+      "direction": "forward",
+      "description": "File defines this function.",
+      "weight": 1
+    },
+    {
+      "source": "file:src/services/bubbleClient.js",
+      "target": "class:src/services/bubbleClient.js:BubbleClient",
+      "type": "contains",
+      "direction": "forward",
+      "description": "File defines this client class.",
+      "weight": 1
+    },
+    {
+      "source": "class:src/services/bubbleClient.js:BubbleClient",
+      "target": "function:src/services/bubbleClient.js:BubbleClient.constructor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:src/services/bubbleClient.js:BubbleClient",
+      "target": "function:src/services/bubbleClient.js:BubbleClient.fetchEntries",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:src/services/bubbleClient.js:BubbleClient",
+      "target": "function:src/services/bubbleClient.js:BubbleClient.createEntry",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:src/services/bubbleClient.js:BubbleClient",
+      "target": "function:src/services/bubbleClient.js:BubbleClient.updateEntry",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:src/services/bubbleClient.js:BubbleClient",
+      "target": "function:src/services/bubbleClient.js:BubbleClient.headers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/services/powerDmsClient.js",
+      "target": "class:src/services/powerDmsClient.js:PowerDmsClient",
+      "type": "contains",
+      "direction": "forward",
+      "description": "File defines this client class.",
+      "weight": 1
+    },
+    {
+      "source": "class:src/services/powerDmsClient.js:PowerDmsClient",
+      "target": "function:src/services/powerDmsClient.js:PowerDmsClient.constructor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:src/services/powerDmsClient.js:PowerDmsClient",
+      "target": "function:src/services/powerDmsClient.js:PowerDmsClient.pullDocuments",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:src/services/powerDmsClient.js:PowerDmsClient",
+      "target": "function:src/services/powerDmsClient.js:PowerDmsClient.pushDocument",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:src/services/powerDmsClient.js:PowerDmsClient",
+      "target": "function:src/services/powerDmsClient.js:PowerDmsClient.updateDocument",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:src/services/powerDmsClient.js:PowerDmsClient",
+      "target": "function:src/services/powerDmsClient.js:PowerDmsClient.request",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:src/main.js:render",
+      "target": "function:src/main.js:askCopilot",
+      "type": "calls",
+      "direction": "forward",
+      "description": "render obtains the displayed answer and citations by calling askCopilot.",
+      "weight": 0.95
+    },
+    {
+      "source": "function:src/main.js:render",
+      "target": "function:src/main.js:bindEvents",
+      "type": "calls",
+      "direction": "forward",
+      "description": "render attaches the interaction handlers after rendering the UI.",
+      "weight": 0.95
+    },
+    {
+      "source": "function:src/main.js:bindEvents",
+      "target": "function:src/main.js:render",
+      "type": "calls",
+      "direction": "forward",
+      "description": "UI event callbacks rerender after local state changes.",
+      "weight": 0.95
+    }
+  ],
+  "layers": [
+    {
+      "id": "layer:browser-experience",
+      "name": "Browser experience",
+      "description": "Static HTML mount point, self-contained browser application, and responsive UI styling.",
+      "nodeIds": [
+        "file:index.html",
+        "file:src/main.js",
+        "file:src/styles.css"
+      ]
+    },
+    {
+      "id": "layer:integration-adapters",
+      "name": "Integration adapters",
+      "description": "Typed Bubble Data API and PowerDMS bridge clients; the current browser entrypoint does not import these adapters.",
+      "nodeIds": [
+        "file:src/services/bubbleClient.js",
+        "file:src/services/powerDmsClient.js"
+      ]
+    },
+    {
+      "id": "layer:build-and-check",
+      "name": "Build and source checks",
+      "description": "Node scripts that copy the static application for distribution and check expected UI strings.",
+      "nodeIds": [
+        "file:scripts/build.mjs",
+        "file:scripts/check.mjs"
+      ]
+    },
+    {
+      "id": "layer:product-context",
+      "name": "Product context and configuration",
+      "description": "README scope and package scripts for local serving, building, and checking.",
+      "nodeIds": [
+        "document:README.md",
+        "config:package.json",
+        "file:.gitkeep"
+      ]
+    }
+  ],
+  "tour": [
+    {
+      "order": 1,
+      "title": "Product concept and boundary",
+      "description": "Read the README for the intended policy and records workflow and its explicit concept-stage limitations.",
+      "nodeIds": [
+        "document:README.md"
+      ]
+    },
+    {
+      "order": 2,
+      "title": "Browser entry and rendered experience",
+      "description": "Follow the HTML module script into the self-contained UI and inspect its stylesheet.",
+      "nodeIds": [
+        "file:index.html",
+        "file:src/main.js",
+        "file:src/styles.css"
+      ]
+    },
+    {
+      "order": 3,
+      "title": "Local policy assistant behavior",
+      "description": "Inspect the local query ranking and render/event functions. Answers are synthesized from in-memory demo records and do not call a model or cite a remote source.",
+      "nodeIds": [
+        "function:src/main.js:askCopilot",
+        "function:src/main.js:render",
+        "function:src/main.js:bindEvents"
+      ]
+    },
+    {
+      "order": 4,
+      "title": "Integration adapter boundary",
+      "description": "Review the standalone Bubble and PowerDMS request clients. Their source modules are not imported by src/main.js, and README warns that browser-delivered credentials are exposed.",
+      "nodeIds": [
+        "class:src/services/bubbleClient.js:BubbleClient",
+        "class:src/services/powerDmsClient.js:PowerDmsClient",
+        "file:src/services/bubbleClient.js",
+        "file:src/services/powerDmsClient.js"
+      ]
+    },
+    {
+      "order": 5,
+      "title": "Build and static source check",
+      "description": "Trace the package scripts to the static copy build and required-term check.",
+      "nodeIds": [
+        "config:package.json",
+        "file:scripts/build.mjs",
+        "file:scripts/check.mjs"
+      ]
+    }
+  ]
+}
