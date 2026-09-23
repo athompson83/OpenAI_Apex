@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "project": "Apex DMS",
+  "source": {
+    "branch": "main",
+    "commit": "ffc96b1da2fc0c536bebfd0b7d44975777c173a1",
+    "remote": "athompson83/OpenAI_Apex"
+  },
+  "tooling": {
+    "name": "Understand-Anything",
+    "revision": "6df3065f1d8ddc2ce3615314d1d493f36d6b1c80"
+  },
+  "inventory": {
+    "files": 10,
+    "categoryCounts": {
+      "code": 6,
+      "docs": 1,
+      "markup": 2,
+      "config": 1
+    },
+    "importEdges": 0
+  },
+  "generated": [
+    ".ua/knowledge-graph.json",
+    "docs/architecture/agent-context.md",
+    "docs/architecture/system-overview.mmd",
+    "docs/architecture/assistant-and-integrations.mmd"
+  ],
+  "caveats": [
+    "No AGENTS.md, repository governance file, or .codegraph/ index was present at repository root; no repository pointer was required by governance.",
+    "Scanner resolved no source import edges among the 10 tracked inventory files. The HTML script reference and package commands are represented as explicit source-backed non-import edges.",
+    "The adapter modules are not wired into src/main.js; README warns that browser-delivered integration tokens are visible.",
+    "The graph does not certify runtime behavior, data persistence, authorization, integration connectivity, or product readiness.",
+    "index.html does not link src/styles.css and src/main.js does not import it, leaving the stylesheet outside the current browser execution path."
+  ]
+}

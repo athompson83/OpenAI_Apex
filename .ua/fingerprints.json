@@ -1,0 +1,280 @@
+{
+  "version": "1.0.0",
+  "gitCommitHash": "ffc96b1da2fc0c536bebfd0b7d44975777c173a1",
+  "generatedAt": "2026-09-23T19:37:36.929Z",
+  "files": {
+    ".gitkeep": {
+      "filePath": ".gitkeep",
+      "contentHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1,
+      "hasStructuralAnalysis": false
+    },
+    "README.md": {
+      "filePath": "README.md",
+      "contentHash": "1174c982e386a2245c49b17582b46ce0906cecaa27795af2d358375f6a1e4d82",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 62,
+      "hasStructuralAnalysis": false
+    },
+    "index.html": {
+      "filePath": "index.html",
+      "contentHash": "369328e1189255822e08fb3d5d7e59258e66b19b8e940974b42daf0f2deedcc5",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 13,
+      "hasStructuralAnalysis": false
+    },
+    "package.json": {
+      "filePath": "package.json",
+      "contentHash": "183a77ba06f3945d67cc23ab7c473f424d4bcc74112e30b6ff14fa0aa5ed2178",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 12,
+      "hasStructuralAnalysis": false
+    },
+    "scripts/build.mjs": {
+      "filePath": "scripts/build.mjs",
+      "contentHash": "b63e7c1d4e9d3a25a63d99fcb9c651083d42b5f2c30d2b9212d8156c99df0f85",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "node:fs/promises",
+          "specifiers": [
+            "mkdir",
+            "cp",
+            "copyFile",
+            "rm"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 8,
+      "hasStructuralAnalysis": true
+    },
+    "scripts/check.mjs": {
+      "filePath": "scripts/check.mjs",
+      "contentHash": "e275a56c1272d9958956431c3dc0b28e8aad676d5a709d6891ad369d179817c4",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "node:fs/promises",
+          "specifiers": [
+            "readFile"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 20,
+      "hasStructuralAnalysis": true
+    },
+    "src/main.js": {
+      "filePath": "src/main.js",
+      "contentHash": "b06fba846484f283e480bd8ff066094f166846149237cc187f6c261d5efa4851",
+      "functions": [
+        {
+          "name": "askCopilot",
+          "params": [
+            "question"
+          ],
+          "exported": false,
+          "lineCount": 14
+        },
+        {
+          "name": "icon",
+          "params": [
+            "value"
+          ],
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "tags",
+          "params": [
+            "items"
+          ],
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "escapeHtml",
+          "params": [
+            "value"
+          ],
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "render",
+          "params": [],
+          "exported": false,
+          "lineCount": 51
+        },
+        {
+          "name": "metric",
+          "params": [
+            "emoji",
+            "label",
+            "value",
+            "trend"
+          ],
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "panelTitle",
+          "params": [
+            "emoji",
+            "title",
+            "subtitle"
+          ],
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "documentCard",
+          "params": [
+            "document"
+          ],
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "feature",
+          "params": [
+            "emoji",
+            "title",
+            "text"
+          ],
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "detailPanel",
+          "params": [
+            "document"
+          ],
+          "exported": false,
+          "lineCount": 14
+        },
+        {
+          "name": "taskRow",
+          "params": [
+            "task"
+          ],
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "integrationRow",
+          "params": [
+            "integration"
+          ],
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "bindEvents",
+          "params": [],
+          "exported": false,
+          "lineCount": 14
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 157,
+      "hasStructuralAnalysis": true
+    },
+    "src/services/bubbleClient.js": {
+      "filePath": "src/services/bubbleClient.js",
+      "contentHash": "98e8ed4239185fb5170ea97c6e916cb2ab8c4011c64952c0f22a42e2e657fdbc",
+      "functions": [
+        {
+          "name": "bubbleBaseUrl",
+          "params": [],
+          "exported": false,
+          "lineCount": 2
+        },
+        {
+          "name": "ensureOk",
+          "params": [
+            "response",
+            "action"
+          ],
+          "exported": false,
+          "lineCount": 6
+        }
+      ],
+      "classes": [
+        {
+          "name": "BubbleClient",
+          "methods": [
+            "constructor",
+            "fetchEntries",
+            "createEntry",
+            "updateEntry",
+            "headers"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 41
+        }
+      ],
+      "imports": [],
+      "exports": [
+        "BubbleClient"
+      ],
+      "totalLines": 52,
+      "hasStructuralAnalysis": true
+    },
+    "src/services/powerDmsClient.js": {
+      "filePath": "src/services/powerDmsClient.js",
+      "contentHash": "eca967d1f0c8596079bbdf6c89dc36148eab425f168defcea4e4da82b2f25701",
+      "functions": [],
+      "classes": [
+        {
+          "name": "PowerDmsClient",
+          "methods": [
+            "constructor",
+            "pullDocuments",
+            "pushDocument",
+            "updateDocument",
+            "request"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 42
+        }
+      ],
+      "imports": [],
+      "exports": [
+        "PowerDmsClient"
+      ],
+      "totalLines": 43,
+      "hasStructuralAnalysis": true
+    },
+    "src/styles.css": {
+      "filePath": "src/styles.css",
+      "contentHash": "93b3be2044f05dbc2ee21bc3cf2da8342fd51838cada21c491879a7f30fd48ac",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 230,
+      "hasStructuralAnalysis": false
+    }
+  }
+}

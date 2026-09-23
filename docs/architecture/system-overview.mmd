@@ -1,0 +1,10 @@
+flowchart LR
+  Browser[Browser] --> HTML[index.html]
+  HTML --> Main[src/main.js]
+  Main --> DemoData[In-memory sample policy, training, and work records]
+  Main --> LocalQA[Local lexical answer and citation selection]
+  Styles[src/styles.css]
+  Styles -. not linked by index.html or imported by main.js .-> HTML
+  Package[package.json] --> Build[scripts/build.mjs]
+  Package --> Check[scripts/check.mjs]
+  Build --> Dist[dist static copy]
